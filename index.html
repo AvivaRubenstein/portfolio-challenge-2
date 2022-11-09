@@ -16,7 +16,7 @@
         <nav id="nav-bar">
             <ul>
                 <li><a href="#about-me">About</a></li>
-                <li></li>
+                <li><a href="#my-work">My Work</a></li>
                 <li><a href="https://github.com/AvivaRubenstein" >GitHub</a></li>
                 <li><a href="#contact-form">Contact</a></li>
             </ul>
@@ -26,16 +26,30 @@
    </header>
 
    <section id="about-me">
-        <img src="./Assets/StockPhoto - Copy.jpg" alt="">
+        <img src="./Assets/StockPhoto1.jpg" alt="Stock Photo">
         <h3>Hello! My name is Aviva. Welcome to my portfolio!<h3>
             <p>About me: [.........]</p>
    </section>
 
+   <section id="my-work">
+    <a href="https://avivarubenstein.github.io/prework-study-guide/">
+        <img id="study-guide" src="./Assets/StudyGuide.jpg" alt="Study Guide">
+    </a>
+    <a href="https://avivarubenstein.github.io/challenge-1-horiseon-site/">
+        <img id="challenge-1" src="./Assets/Refactoring.jpg" alt="Refactored website">
+    </a>
+    <a href="https://www.google.com/">
+        <img id="coming-soon" src="./Assets/ComingSoon.jpg" alt="Coming Soon Placeholder">
+    </a>
+   </section>
+
    <form id="contact-form">
     <h3>Contact Me:</h3>
+    <label for ="name">Name: </label>
+    <input id="name" type="text" placeholder="first last" />
     <label for="email">E-mail:</label>
-    <input id="email" type="text" placeholder="me@example.com" />
-
+    <input id="email" type="email" placeholder="me@example.com" />
+    <button>Submit</button>
    </form>
 
   </body>
