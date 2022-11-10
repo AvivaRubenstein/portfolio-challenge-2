@@ -2,17 +2,44 @@ header {
 
 }
     header h1 {
+        font-family: cursive,'Times New Roman', serif;
         
 }
-    #nav-bar {
+nav ul {
+    display: flex;
+    /* the height will be 9% of the viewport */
+    height:9vh;
+    justify-content: right;
+    align-items: center;
+    /* list style type none gets rid of the bullet points for list items */
+    list-style-type:none;
+    background-color: gray;
+    /* fixing the nav bar to the top of the page even when user scrolls past a certain point = sticky*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    
+  }
+  
+  nav a {
+    font-weight: bold;
+    font-size: 125%;
+    margin-left: 8pc;
+    margin-right: 4pc;
+    
+    
+  }
+  
 
-    }
-    #nav-bar ul {
-
-    }
 #about-me {
-
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
+    #about-me img {
+        height: 40vh;
+        width: 40vh;
+    }
 
 #my-work {
    display:flex; 
@@ -21,19 +48,23 @@ header {
    justify-content:space-around;
 }
     #study-guide {
-
+        width: 60vh;
 }
     #challenge-1 {
-
+        width: 45vh;
+        height: 45vh;
+        
 }
     .coming-soon {
-    height:200px;
+        width: 45vh;
+        height: 45vh;
     
 }
     .in-development {
-
+    width: 45vh;
+    height: 45vh;
 }
 
 #contact-form {
-    
+
 }
