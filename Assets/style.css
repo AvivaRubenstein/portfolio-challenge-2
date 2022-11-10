@@ -1,0 +1,39 @@
+header {
+
+}
+    header h1 {
+        
+}
+    #nav-bar {
+
+    }
+    #nav-bar ul {
+
+    }
+#about-me {
+
+}
+
+#my-work {
+   display:flex; 
+   flex-wrap:wrap;
+   background-color: black;
+   justify-content:space-around;
+}
+    #study-guide {
+
+}
+    #challenge-1 {
+
+}
+    .coming-soon {
+    height:200px;
+    
+}
+    .in-development {
+
+}
+
+#contact-form {
+    
+}
