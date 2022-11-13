@@ -1,8 +1,30 @@
+:root {
+    --darkest: #231942;
+    --dark: #5E548E;
+    --med: #9F86C0;
+    --light: #BE95C4;
+    --lightest: #E0B1CB; 
+
+    /* --darkest: #22223B;
+    --dark: #4A4E69;
+    --med: #9A8C98;
+    --light: #C9ADA7;
+    --lightest: #F2E9E4; */
+
+}
+body{
+background-color: var(--med); 
+margin: 0;
+padding: 0;
+}
 header {
+    margin-top: -20px;
+    background:linear-gradient(45deg, var(--dark), var(--lightest));
 
 }
     header h1 {
         font-family: cursive,'Times New Roman', serif;
+        color: var(--darkest);
         
 }
 nav ul {
@@ -11,23 +33,27 @@ nav ul {
     height:9vh;
     justify-content: right;
     align-items: center;
+    background-color: var(--darkest);
     /* list style type none gets rid of the bullet points for list items */
     list-style-type:none;
-    background-color: gray;
-    /* fixing the nav bar to the top of the page even when user scrolls past a certain point = sticky*/
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
     
   }
+  
   
   nav a {
     font-weight: bold;
     font-size: 125%;
-    margin-left: 8pc;
-    margin-right: 4pc;
-    
-    
+    margin-left: 30px;
+    margin-right: 40px;
+    /* TODO get rid of margins and format with flex! */
+    color: var(--light);
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: var(--lightest);
+  }
+  nav li:hover {
+    border: 2px solid var(--lightest);
   }
   
 
@@ -44,15 +70,32 @@ nav ul {
 #my-work {
    display:flex; 
    flex-wrap:wrap;
-   background-color: black;
+   background-color: var(--darkest);
    justify-content:space-around;
+   align-content: space-between;
 }
+figure {
+    border: 2px solid var(--darkest);
+}
+figure:hover {
+    border: 5px solid var(--med);
+    box-shadow: 10px 10px black; 
+}
+figcaption {
+    color:antiquewhite;
+    padding: 2px;
+    text-align: center;
+}
+/* figcaption:hover {
+    color:#0010ff;
+} */
     #study-guide {
         width: 60vh;
+        height: 48vh;
 }
     #challenge-1 {
         width: 45vh;
-        height: 45vh;
+        height: 33vh;
         
 }
     .coming-soon {
@@ -66,5 +109,36 @@ nav ul {
 }
 
 #contact-form {
-
+    display:flex;
+    justify-content: center;
+    font-size: 125%;
+    background-color: var(--dark);
+    
 }
+#contact-form ul{
+    list-style-type:none;
+    padding: 3pc;
+    border: 4px solid var(--darkest);
+    background-color: var(--med);
+}
+#contact-form li{
+    margin-top: 1pc;
+    margin-bottom: 1pc;
+}
+
+
+@media screen and (max-width 992px) {  
+
+ }
+@media screen and (max-width 768px) { 
+    nav a {
+    margin-left: 0;
+    margin-right: 0;
+    }
+  }
+@media screen and (max-width 576px) {  
+    nav a {
+        margin-left: 0;
+        margin-right: 0;
+        }
+ }
