@@ -19,43 +19,44 @@ padding: 0;
 }
 header {
     margin-top: -20px;
-    background:linear-gradient(45deg, var(--dark), var(--lightest));
-
+    width: 100vw;
 }
-    header h1 {
+#nav-bar h1 {
         font-family: cursive,'Times New Roman', serif;
-        color: var(--darkest);
+        color: wheat;
         
 }
-nav ul {
+
+#nav-bar {
     display: flex;
-    /* the height will be 9% of the viewport */
-    height:9vh;
-    justify-content: right;
-    align-items: center;
+    flex-direction: row;
+
+    /* 100 vw makes it take up 100% of the viewport's width */
+    width: 100vw;
     background-color: var(--darkest);
+
+    /* the height will be 9% of the viewport */
+    /* height:9vh; */
+    justify-content: space-around;
+    align-items: center; 
     /* list style type none gets rid of the bullet points for list items */
     list-style-type:none;
-    
+    background:linear-gradient(45deg, var(--dark), var(--lightest));
+    /* fixes nav bar to the top even when scrolling lower */
+    position:fixed;
   }
   
   
-  nav a {
+#nav-bar a {
     font-weight: bold;
     font-size: 125%;
-    margin-left: 30px;
-    margin-right: 40px;
-    /* TODO get rid of margins and format with flex! */
-    color: var(--light);
+    color: var(--darkest);
     text-decoration: none;
   }
-  nav a:hover {
+#nav-bar a:hover {
     color: var(--lightest);
-  }
-  nav li:hover {
     border: 2px solid var(--lightest);
   }
-  
 
 #about-me {
     display:flex;
@@ -65,6 +66,9 @@ nav ul {
     #about-me img {
         height: 40vh;
         width: 40vh;
+        /* moves the about me image down slightly so it isn't blocked by the 
+        fixed nav bar */
+        margin-top: 112px;
     }
 
 #my-work {
@@ -86,9 +90,7 @@ figcaption {
     padding: 2px;
     text-align: center;
 }
-/* figcaption:hover {
-    color:#0010ff;
-} */
+
     #study-guide {
         width: 60vh;
         height: 48vh;
@@ -127,18 +129,25 @@ figcaption {
 }
 
 
-@media screen and (max-width 992px) {  
-
- }
-@media screen and (max-width 768px) { 
-    nav a {
-    margin-left: 0;
-    margin-right: 0;
+@media screen and (max-width: 768px) { 
+    #nav-bar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* height: 7vh; */
     }
-  }
-@media screen and (max-width 576px) {  
-    nav a {
-        margin-left: 0;
-        margin-right: 0;
-        }
+    #about-me img {
+        margin-top: 40vh;
+    }
+}
+
+@media screen and (max-width: 576px) {  
+    #nav-bar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* height: 7vh; */
+    }
+
+    #about-me img {
+        margin-top: 40vh;
+    }
  }
