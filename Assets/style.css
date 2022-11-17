@@ -62,12 +62,20 @@ header {
     flex-direction: column;
     align-items: center;
 }
+/* the margin here moves the heading down so it isn't blocked
+by the fixed nav bar */
+    #about-me h2{
+        margin-top: 10%;
+        color: var(--darkest);
+    }
     #about-me img {
-        height: 40vh;
-        width: 40vh;
-        /* moves the about me image down slightly so it isn't blocked by the 
-        fixed nav bar */
-        margin-top: 112px;
+        height: 40%;
+        width: 30%;
+    }
+    #about-me p {
+        font-size: larger;
+        margin-left: 3%;
+        margin-right: 3%;
     }
 /* the my-work section is the flex container for all of the 
 image cards */
@@ -77,6 +85,9 @@ image cards */
    background-color: var(--darkest);
    justify-content:space-around;
    align-content: space-between;
+}
+#my-work h2 {
+    color: var(--lightest);
 }
 
 /* the first project should be larger than the others, so it 
@@ -152,8 +163,9 @@ because they are formatted with flexbox */
         flex-wrap: wrap;
         /* height: 7vh; */
     }
-    #about-me img {
-        margin-top: 40vh;
+    /* top margin keeps nav bar from blocking content */
+    #about-me h2 {
+        margin-top: 31%;
     }
 }
 
@@ -164,7 +176,7 @@ because they are formatted with flexbox */
         
     }
 
-    #about-me img {
-        margin-top: 40vh;
+    #about-me h2 {
+        margin-top: 31%;
     }
  }
